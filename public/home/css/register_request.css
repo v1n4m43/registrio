@@ -1,0 +1,171 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    border-style: solid;
+}
+
+.box img {
+    width: 45px;
+    height: 70px;
+    margin-right: 10px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.box .title {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: "Century Gothic";
+}
+
+.box .content {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    display: none;
+    font-family: "Century Gothic";
+}
+
+.box .expand-button {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.box .expand-button img {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.expanded .content {
+    display: block;
+}
+
+.expanded .expand-button {
+    display: block;
+}
+
+.expanded .expand-button img {
+    width: 180px;
+    height: 60px;
+}
+
+i {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+    font-size: 3rem;
+}
+
+.expanded i {
+    transform: rotate(0);
+}
+
+.box-title {
+    line-height: 1.5;
+    font-family: "Century Gothic";
+}
+
+    /* Additional styles for popup */
+    .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-container {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+z-index: 1000;
+border-style: solid;
+border-color: white;
+max-height: 90%; /* Set a maximum height for the whole popup container */
+overflow-y: auto; /* Make the whole popup scrollable if content overflows */
+}
+
+.popup-title-container {
+    background-color: #4C6085; /* Header color */
+    padding: 10px; /* Add padding to enlarge the background color */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+.popup-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Century Gothic";
+    color: #fff; /* Text color is white */
+    margin-bottom: 10px;
+}
+
+.popup-content {
+font-size: 14px;
+line-height: 1.6;
+font-family: "Century Gothic";
+padding: 20px;
+background-color: #fff; /* Background color for content */
+border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+overflow-y: auto; /* Make the content scrollable if it overflows */
+max-height: 200px; /* Set a maximum height for each popup content */
+}
+
+.popup-buttons {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff; /* Header color */
+    padding: 15px; /* Add padding to enlarge the background color */
+    border-radius: 5px 5px 5px 5px ;
+}
+
+.popup-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Close icon styles */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-close i {
+    font-size: 25px;
+}
+.popup-image {
+max-width: 30%; /* Ensure image doesn't exceed container width */
+height: auto; /* Auto-adjust height to maintain aspect ratio */
+margin-right: 10px; /* Space between the image and the content */
+float: left; /* Align images to the left side of the popup-content */
+max-height: calc(100% - 20px); /* Adjust maximum height to fit inside popup-content */
+}
