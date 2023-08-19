@@ -76,7 +76,6 @@ Route::get('/user', [UserController::class, 'index'])->name('user');
 
 //Birth Certificate
 Route::get('/birth', [BirthCertController::class, 'index'])->name('birth');
-Route::post('/birth/create', [BirthCertController::class, 'create'])->name('birth.create');
 Route::post('/admin/birth', [BirthCertController::class, 'SubmitBirth'])->name('birth.store');
 Route::post('/birth/edit', [BirthCertController::class, 'BirthEdit'])->name('birth.edit');
 Route::delete('/birth/delete/{id}', [BirthCertController::class, 'delete'])->name('birth.delete');

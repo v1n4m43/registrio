@@ -9,4 +9,9 @@ class BirthCertificateDetail extends Model
 {
     use HasFactory;
     protected $table = 'birth_certificate_details';
+
+    public function storeData($input)
+    {
+        return static::create($input);
+    }
 }
