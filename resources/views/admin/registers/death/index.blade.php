@@ -21,7 +21,7 @@
 
 
 {{--------------------------------------------YOUR CONTENT HERE--------------------------------------------------}}
-{{-- @include('admin.registers.death.create') --}}
+@include('admin.registers.death.create')
 
    <div class="container-fluid pt-4 px-4">
     <div class="col-sm-12 col-xl-12">
@@ -33,7 +33,7 @@
                    <h6 class="mb-4">Registration Death Certificate</h6>
                </div>
                  <div class="col-3">
-                     <button type="button" class="btn btn-outline-warning m-2" data-bs-toggle="modal" data-bs-target="#BirthRegisterModal">Death Registration</button>
+                     <button type="button" class="btn btn-outline-warning m-2" data-bs-toggle="modal" data-bs-target="#DeathRegisterModal">Death Registration</button>
                  </div>
                 </div>
                  <hr></hr>
