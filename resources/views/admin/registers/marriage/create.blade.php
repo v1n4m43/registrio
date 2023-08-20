@@ -18,7 +18,7 @@
 
                                     <div class="row">
 
-                                        <div class="col-lg-4 col-md-6 col-sm-12" id="lnamez">
+                                        <div class="col-lg-4 col-md-6 col-sm-12" >
                                             <div class="form-group">
                                                 <label>Last Name:</label>
                                                 <input type="text" class="form-control" name="groom_lastname" id="groom_lastname" autocomplete="off">
@@ -26,7 +26,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-4 col-md-6 col-sm-12" id="lnamez">
+                                        <div class="col-lg-4 col-md-6 col-sm-12" >
                                             <div class="form-group">
                                                 <label>First Name:</label>
                                                 <input type="text" class="form-control" name="groom_firstname" id="groom_firstname" autocomplete="off">
@@ -259,14 +259,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <div class="form-group">
-                                            <label>Giver's Residence:</label>
-                                            <input type="text" class="form-control" name="groom_consent_giver_residence" id="groom_consent_giver_residence" placeholder=""  autocomplete="off">
-                                            <span class="groom_consent_giver_residence-error"></span>
-                                        </div>
-                                    </div>
-
                                 </div>
 
 
@@ -306,8 +298,8 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label>Date when dissolved:</label>
-                                        <input type="date" class="form-control" name="parents_marriage_date" id="parents_marriage_date" placeholder="" minlength="11" maxlength="11" autocomplete="off">
-                                        <span class="parents_marriage_date-error"></span>
+                                        <input type="date" class="form-control" name="groom_date_dissolution" id="groom_date_dissolution" placeholder="" minlength="11" maxlength="11" autocomplete="off">
+                                        <span class="groom_date_dissolution-error"></span>
                                     </div>
                                 </div>
                             </div>
@@ -316,8 +308,8 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="form-group">
                                             <label>Degree of reltionship of contracting parties:</label>
-                                            <input type="text" class="form-control" name="groom_previous_marriage_dissolution_method" id="groom_previous_marriage_dissolution_method" placeholder=""  autocomplete="off">
-                                            <span class="groom_previous_marriage_dissolution_method-error"></span>
+                                            <input type="text" class="form-control" name="groom_degree_of_relationship" id="groom_degree_of_relationship" placeholder=""  autocomplete="off">
+                                            <span class="groom_degree_of_relationship-error"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +323,7 @@
 
                                     <div class="row">
 
-                                        <div class="col-lg-4 col-md-6 col-sm-12" id="lnamez">
+                                        <div class="col-lg-4 col-md-6 col-sm-12" >
                                             <div class="form-group">
                                                 <label>Last Name:</label>
                                                 <input type="text" class="form-control" name="bride_lastname" id="bride_lastname" autocomplete="off">
@@ -339,7 +331,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-4 col-md-6 col-sm-12" id="lnamez">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
                                             <div class="form-group">
                                                 <label>First Name:</label>
                                                 <input type="text" class="form-control" name="bride_firstname" id="bride_firstname" autocomplete="off">
@@ -668,14 +660,6 @@
 
                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                         <div class="form-group">
-                                            <label>Position:</label><select class="form-control" name="registered_by_position" id="registered_by_position"  autocomplete="off">
-                                                <option value="">&larr; Please Select &rarr;</option>
-                                               </select>
-                                            <span class="registered_by_position-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-                                        <div class="form-group">
                                             <label>Date:</label>
                                             <input type="date" class="form-control" name="registered_by_date" id="registered_by_date" placeholder="" minlength="11" maxlength="11" autocomplete="off">
                                             <span class="registered_by_date-error"></span>
@@ -693,7 +677,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-          <button type="button" id="btn-student" class="btn btn-outline-warning">Save</button>
+          <button type="button" id="submit_marriage" class="btn btn-outline-warning">Save</button>
         </div>
     </form>
       </div>
@@ -736,9 +720,6 @@
 
                      const groom_religion = document.querySelector('input[id=groom_religion]').value;
                      console.log(groom_religion);
-
-                     const child_birth_order = document.querySelector('input[id=child_birth_order]').value;
-                     console.log(child_birth_order);
 
                      const groom_civil_status = document.querySelector('input[id=groom_civil_status]').value;
                      console.log(groom_civil_status);
@@ -784,8 +765,6 @@
                      const groom_consent_giver_residence = document.querySelector('input[id=groom_consent_giver_residence]').value;
                      console.log(groom_consent_giver_residence);
 
-                     const mother_country = document.querySelector('input[id=mother_country]').value;
-                     console.log(mother_country);
 
                      //Groom's Previous marriage details
                      const groom_previous_marriage_dissolution_method = document.querySelector('input[id=groom_previous_marriage_dissolution_method]').value;
@@ -923,7 +902,7 @@
                     data.append('groom_relationship', groom_relationship);
                     data.append('groom_consent_giver_residence', groom_consent_giver_residence);
                     
-                    data.append('groom_previous_marriage_dissolution_methodgroom_place_dissolution', groom_previous_marriage_dissolution_methodgroom_place_dissolution);
+                    data.append('groom_previous_marriage_dissolution_method', groom_previous_marriage_dissolution_method);
                     data.append('groom_place_dissolution', groom_place_dissolution);
                     data.append('groom_date_dissolution', groom_date_dissolution);
                     data.append('groom_degree_of_relationship', groom_degree_of_relationship);
@@ -1031,7 +1010,7 @@
                     $('#bride_degree_of_relationship-error').html("");
 
                     $.ajax({
-                            url: '{{ route('birth.store') }}',
+                            url: '{{ route('marriage.store') }}',
                             method: 'post',
                             data: data,
                             cache: false,
