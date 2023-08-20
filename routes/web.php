@@ -83,9 +83,9 @@ Route::delete('/birth/delete/{id}', [BirthCertController::class, 'delete'])->nam
 
 //Marriage License
 Route::get('/marriage', [MarriageCertController::class, 'index'])->name('marriage');
-Route::post('/submitmarriage', [MarriageCertController::class, 'SubmitMarriagelicense'])->name('marriage.store');
-Route::post('/birth/edit', [MarriageCertController::class, 'MarriageLicenseEdit'])->name('marriagelicense.edit');
-Route::delete('/birth/delete/{id}', [MarriageCertController::class, 'delete'])->name('marriage.delete');
+Route::post('/submitmarriage', [MarriageCertController::class, 'SubmitMarriageLicense'])->name('marriage.store');
+Route::post('/marriage/edit', [MarriageCertController::class, 'MarriageLicenseEdit'])->name('marriagelicense.edit');
+Route::delete('/marriage/delete/{id}', [MarriageCertController::class, 'delete'])->name('marriage.delete');
 
 
 //Death Certificate
