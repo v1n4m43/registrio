@@ -94,7 +94,7 @@ class MarriageCertController extends Controller
             return response()->json(['errors' => $validator->errors()]);
         }
 
-        $birthcert = new MarriageLicense();
+        $marriagecert = new MarriageLicense();
 
             $tData = [
                 'groom_firstname' => $request->groom_firstname,
@@ -175,8 +175,8 @@ class MarriageCertController extends Controller
 
     public function edit($id)
     {
-        $birthcert = MarriageLicense::find($id);
-        if (!$birthcert) {
+        $marriagecert = MarriageLicense::find($id);
+        if (!$marriagecert) {
             return response()->json(['message' => 'Marriage License not found'], 404);
         }
 
