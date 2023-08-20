@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-plus-circle"></i> BIRTH REGISTRATION</h5>
+          <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-plus-circle"></i> MARRIAGE REGISTRATION</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
            <div class="col-lg-11 mb-2 mt-1" id="mgs-student" style="margin-left: 4%"></div>
@@ -45,19 +45,7 @@
                                     </div>
 
                                 <div class="row mb-3 mt-1">
-
-                                    <div class="col-lg-4 col-md-6 col-sm-12 mt-1">
-                                        <div class="form-group">
-                                            <label>Sex:</label>
-                                            <select class="form-control" name="groom_sex" id="groom_sex">
-                                                <option value="">&larr; Please Select &rarr;</option>
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                                <option value="Other">Other</option>
-                                            </select>
-                                            <span class="child_sex-error"></span>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="col-lg-4 col-md-6 col-sm-12 mt-1">
                                         <div class="form-group">
                                             <label>Date of Birth:</label>
@@ -65,6 +53,7 @@
                                             <span class="groom_place_of_birth-error"></span>
                                         </div>
                                     </div>
+                                    
                                     <div class="col-lg-4 col-md-6 col-sm-12 mt-1">
                                         <div class="form-group">
                                             <label>Age:</label>
@@ -73,25 +62,27 @@
                                         </div>
                                     </div>
 
-                                </div>
-
-                                <div class="row mb-2">
-
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="col-lg-4 col-md-6 col-sm-12 mt-1">
                                         <div class="form-group">
-                                            <label>Place of Birth:</label>
-                                            <input type="email" class="form-control" name="groom_place_of_birth" id="groom_place_of_birth" placeholder=""  autocomplete="off">
-                                            <span class="groom_place_of_birth-error"></span>
+                                            <label>Sex:</label>
+                                            <select class="form-control" name="groom_sex" id="groom_sex">
+                                                <option value="">&larr; Please Select &rarr;</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <span class="groom_sex-error"></span>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                    
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
                                         <div class="form-group">
                                             <label>Citizenship:</label>
                                             <input type="text" class="form-control" name="groom_citizenship" id="groom_citizenship" autocomplete="off">
                                             <span class="groom_citizenship"></span>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
+
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
                                         <div class="form-group">
                                             <label>Residence:</label>
                                             <input type="text" class="form-control" name="groom_residence" id="groom_residence" autocomplete="off">
@@ -99,6 +90,16 @@
                                         </div>
                                     </div>
 
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12" >
+                                        <div class="form-group">
+                                            <label>Place of Birth:</label>
+                                            <input type="text" class="form-control" name="groom_place_of_birth" id="groom_place_of_birth" placeholder="City/Municipality-province-Country" autocomplete="off">
+                                            <span class="groom_place_of_birth-error"></span>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="row">
@@ -235,22 +236,30 @@
 
                                 <div class="row">
 
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="form-group">
-                                            <label>Advice:</label>
+                                            <label>Person who gave consent and advise:</label>
                                             <input type="text" class="form-control" name="groom_parental_consent_advice" id="groom_parental_consent_advice" placeholder="" minlength="11" maxlength="11" autocomplete="off">
                                             <span class="groom_parental_consent_advice-error"></span>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="form-group">
                                             <label>Relationship:</label>
                                             <input type="text" class="form-control" name="groom_relationship" id="groom_relationship" placeholder="" minlength="11" maxlength="11" autocomplete="off">
                                             <span class="groom_relationship-error"></span>
                                         </div>
                                     </div>
+                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Giver's Residence:</label>
+                                            <input type="email" class="form-control" name="groom_consent_giver_residence" id="groom_consent_giver_residence" placeholder=""  autocomplete="off">
+                                            <span class="groom_consent_giver_residence-error"></span>
+                                        </div>
+                                    </div>
 
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="form-group">
                                             <label>Giver's Residence:</label>
                                             <input type="email" class="form-control" name="groom_consent_giver_residence" id="groom_consent_giver_residence" placeholder=""  autocomplete="off">

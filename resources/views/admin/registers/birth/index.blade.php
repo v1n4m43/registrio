@@ -58,8 +58,8 @@
                           <td>{{ $birth->child_middlename }}</td>
                           <td>{{ $birth->informant_name }}</td>
 
-                          <td width="14%"><center><button class="btn btn-outline-primary btn-sm btn-edit" data-edit="{{ $birth->id }}" data-bs-toggle="modal" data-bs-target="#BirthEditModal"><i class="bi bi-plus-edit"></i> Edit</button>
-                            {{-- @include('admin.registers.birth.edit') --}}
+                          <td width="14%"><center><button class="btn btn-outline-primary btn-sm btn-edit" data-edit="{{ $birth->id }}" data-bs-toggle="modal" data-bs-target="#edit-BirthEditModal"><i class="bi bi-plus-edit"></i> Edit</button>
+                            @include('admin.registers.birth.edit') 
 
                             <form onclick="return confirm('Are you sure? ')" class="d-inline" action="{{ route('birth.delete', $birth->id) }}" method="POST">
                                 @csrf
@@ -77,6 +77,7 @@
   </div>
 
 {{---------------------------------------------//END CONTENT-----------------------------------------------------}}
+
 
 
 
@@ -121,3 +122,4 @@
 @include('admin.layouts.footer')
 
 {{----------------------------------------------//DO NOT REMOVE--------------------------------------------------}}
+
