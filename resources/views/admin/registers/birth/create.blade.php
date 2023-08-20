@@ -6,15 +6,14 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
            <div class="col-lg-11 mb-2 mt-1" id="mgs-birth" style="margin-left: 4%"></div>
-       
-
+           <div id="msg_birth"></div>
                 <form>
                 <div class="modal-body">
                       @csrf
                       @method('POST')
 
                        <div class="row justify-content-md-center">
-                          <div id="msg-birth" style=""></div>
+
                           <div class="col-sm-12 col-md-12 col-lg-10">
                                <hr>
                               <div class="" style="border: 1PX solid #b3f0fc;padding: 1%;background-color:#E7F1E3;color: black;font-size: 1.2rem;margin-top: 2%"><center><b>CHILD INFORMATION</b></center></div>
@@ -461,7 +460,7 @@
                                                 <option value="mother">Mother</option>
                                                 <option value="father">Father</option>
                                                 <option value="sibling ">Sibling</option>
-                                    
+
                                             </select>
                                             <span class="informant_relationship-error"></span>
                                         </div>
@@ -518,7 +517,7 @@
                                                 <option value="birth_employee">Birth Employee</option>
                                                 <option value="death_employee">Death Employee</option>
                                                 <option value="marriage_employee">Marriage Employee</option>
-                                    
+
                                                </select>
                                             <span class="prepared_by_position-error"></span>
                                         </div>
@@ -568,7 +567,7 @@
                                                 <option value="birth_employee">Birth Employee</option>
                                                 <option value="death_employee">Death Employee</option>
                                                 <option value="marriage_employee">Marriage Employee</option>
-                                    
+
                                             </select>
                                             <span class="received_by_position-error"></span>
                                         </div>
@@ -618,7 +617,7 @@
                                                 <option value="birth_employee">Birth Employee</option>
                                                 <option value="death_employee">Death Employee</option>
                                                 <option value="marriage_employee">Marriage Employee</option>
-                                    
+
                                             </select>
                                             <span class="registered_by_position-error"></span>
                                         </div>
@@ -709,9 +708,6 @@
                      const child_birth_order = document.querySelector('input[id=child_birth_order]').value;
                      console.log(child_birth_order);
 
-                     //const yearlevel_id = $('#yearlevel_id option:selected').val();
-                     //console.log(yearlevel_id);
-
                      const child_weight_at_birth = document.querySelector('input[id=child_weight_at_birth]').value;
                      console.log(child_weight_at_birth);
 
@@ -722,7 +718,7 @@
 
                      const mother_firstname = document.querySelector('input[id=mother_firstname]').value;
                      console.log(mother_firstname);
-                     
+
                      const mother_middlename = document.querySelector('input[id=mother_middlename]').value;
                      console.log(mother_middlename);
 
@@ -992,7 +988,7 @@
                     $('#parents_marriage_province-error').html("");
                     $('#parents_marriage_country-error').html("");
 
-                    
+
                     $('#informant_signature-error').html("");
                     $('#informant_name-error').html("");
                     $('#informant_relationship-error').html("");
@@ -1154,7 +1150,7 @@
                                     if(response.errors.parents_marriage_country){
                                         $('#parents_marriage_country-error').html(response.errors.parents_marriage_country[0]);
                                     }
-                                    
+
 
                                     if(response.errors.informant_signature){
                                         $('#informant_signature-error').html(response.errors.informant_signature[0]);

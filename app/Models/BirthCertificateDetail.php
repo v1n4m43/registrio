@@ -9,6 +9,7 @@ class BirthCertificateDetail extends Model
 {
     use HasFactory;
     protected $table = 'birth_certificate_details';
+    protected $guarded = array();
 
     public function storeData($input)
     {
